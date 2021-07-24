@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item
+    *ngFor="let c of componentes"
+    [routerLink]="c.redirectTo"
+    detail
+    >
+    <ion-icon [name]="c.icon" color="primary" slot="start"></ion-icon>
+    {{c.name}}
+  </ion-item>
+</ion-list>
+
+<!--<ion-button routerLink="/progress">
+  Progress
+</ion-button>
+
+<ion-button routerLink="/refresher">
+  refresher
+</ion-button>
+
+<ion-button routerLink="/toast">
+  toast
+</ion-button>
+
+<ion-button routerLink="/slides">
+  slides
+</ion-button>
+
+<ion-button routerLink="/segment">
+  segment
+</ion-button> -->
+</ion-content>
